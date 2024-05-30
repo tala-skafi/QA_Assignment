@@ -39,6 +39,7 @@ class RegistrationPage extends BasePage
         $this->driver->findElement(WebDriverBy::id('JsApplicantRegisterForm_password'))->sendKeys($userData["password"]);
         $this->driver->findElement(WebDriverBy::id('JsApplicantRegisterForm_mobPhone'))->sendKeys($userData["phone"]);
         $this->driver->takeScreenshot(__DIR__ ."\screenshots\RegistrationForm\/" . time() . ".png");
+        $this->driver->takeScreenshot(__DIR__ ."\screenshots\partThree\/" . time() . ".png");
 
         // submit the form to register
         $this->submit();

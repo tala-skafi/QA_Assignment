@@ -24,7 +24,7 @@ class PartThreeTest extends BaseTest
         $registrationPage=new RegistrationPage($this->driver);
         //open
         $homePage->open();
-        $this->driver->takeScreenshot(__DIR__ ."\screenshots\partTwo\/" . time() . ".png");
+        $this->driver->takeScreenshot(__DIR__ ."\screenshots\partThree\/" . time() . ".png");
 
         //accept cookies
         $homePage->acceptCookies();
