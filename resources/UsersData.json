@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Tala",
+        "last_name": "Skafi",
+        "birth_date": "1-January-1998",
+        "email": "testuser1717102263@gmail.com",
+        "gender": "Female",
+        "password": "Talatala1212@",
+        "phone": "1234567890",
+        "nationality": "Jordan",
+        "city": "Amman",
+        "visa_status": "Citizen",
+        "degree": "Diploma",
+        "university": "King Abdulaziz University",
+        "university_country": "Jordan",
+        "university_city": "Amman",
+        "major": "Computer Engineering",
+        "graduation_date": "January-2021",
+        "job_level": "Entry Level"
+    }
+]

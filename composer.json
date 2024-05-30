@@ -1,0 +1,15 @@
+{
+    "require": {
+        "php-webdriver/webdriver": "^1.15"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pages\\": "tests/pages/",
+            "TestCases\\": "tests/TestCases/",
+            "utils\\": "tests/utils/"
+        }
+    }
+}
