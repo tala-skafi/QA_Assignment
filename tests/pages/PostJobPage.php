@@ -46,6 +46,7 @@ class PostJobPage extends BasePage
 
             $this->driver->findElement(WebDriverBy::xpath('//*[@id="submitCIForm"]'))->click();
             sleep(5);
+            $this->driver->takeScreenshot(__DIR__ . "\screenshots\partFive\/" . time() . ".png");
             return true;
         }
         catch (Exception $e){

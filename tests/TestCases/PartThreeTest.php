@@ -17,26 +17,44 @@ class PartThreeTest extends BaseTest
      */
     public function testApplyForJob()
     {
+        // initialize pages
+        $homePage = new HomePage($this->driver);
+        $jobPage = new JobsPage($this->driver);
+        $jobApplicationPage = new JobApplicationPage($this->driver);
+        $registrationPage = new RegistrationPage($this->driver);
+
+        // change wo mobile size
         BaseTest::modifyWindowToMobileSize();
-        $homePage=new HomePage($this->driver);
-        $jobPage=new JobsPage($this->driver);
-        $jobApplicationPage=new JobApplicationPage($this->driver);
-        $registrationPage=new RegistrationPage($this->driver);
+
         //open
         $homePage->open();
-        $this->driver->takeScreenshot(__DIR__ ."\screenshots\partThree\/" . time() . ".png");
+        $this->takeScreen();
 
         //accept cookies
         $homePage->acceptCookies();
 
         //search job
-        $homePage->searchJob("Quality Assurance Engineer","United Arab Emirates");
+        $homePage->searchJob("Quality Assurance Engineer", "United Arab Emirates");
+        $this->takeScreen();
+
         $jobPage->clickFirstJob();
+        $this->takeScreen();
+
         $jobPage->clickApply(true);
+        $this->takeScreen();
+
         $registrationPage->fillRegistrationForm();
+        $this->takeScreen();
+
         $jobApplicationPage->fillForm();
+        $this->takeScreen();
 
 
+    }
+
+    private function takeScreen(): void
+    {
+        $this->driver->takeScreenshot(__DIR__ . "\screenshots\partThree\/" . time() . ".png");
     }
 
 }

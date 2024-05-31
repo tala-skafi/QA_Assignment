@@ -11,7 +11,6 @@ class JobsPage extends BasePage {
         $firstJobCategory = $this->driver->wait()->until(
             WebDriverExpectedCondition::visibilityOfElementLocated(WebDriverBy::xpath('//*[@id="results_inner_card"]/ul/li[2]'))
         );
-        $this->driver->takeScreenshot(__DIR__ ."\screenshots\partTwo\/" . time() . ".png");
         $firstJobCategory->click();
 
     }
@@ -27,7 +26,6 @@ class JobsPage extends BasePage {
         $applyButton = $this->driver->wait()->until(
             WebDriverExpectedCondition::visibilityOfElementLocated($by)
         );
-        $this->driver->takeScreenshot(__DIR__ ."\screenshots\partTwo\/" . time() . ".png");
         $applyButton->click();
 
         Assert::assertTrue($registrationPage->checkRegistrationElement(), "Registration form is not displayed");

@@ -25,6 +25,7 @@ class PartFiveTest extends BaseTest
         $postJobPage = new PostJobPage($this->driver);
         //open
         $postJobPage->open();
+        $this->takeScreen();
 
         //accept cookies
         $postJobPage->acceptCookies();
@@ -64,14 +65,12 @@ class PartFiveTest extends BaseTest
         // Check visibility and clickability of elements
         foreach ($elements as $name => $locator) {
             $element = $this->driver->findElement($locator);
-
             $this->assertTrue($element->isDisplayed(), "$name is not visible");
             $this->assertTrue($element->isEnabled(), "$name is not clickable");
 
-            // Optionally, take a screenshot after checking each element
-
         }
-        $this->driver->takeScreenshot(__DIR__ ."\screenshots\partFive\/" . time() . ".png");
+        $this->takeScreen();
+
     }
 //
 //    // Validation testing
@@ -102,6 +101,10 @@ class PartFiveTest extends BaseTest
 //
 //        $this->assertTrue(true); // Placeholder assertion
 //    }
+    private function takeScreen(): void
+    {
+        $this->driver->takeScreenshot(__DIR__ . "\screenshots\partFive\/" . time() . ".png");
+    }
 
 
 }

@@ -13,42 +13,59 @@ use Pages\RegistrationPage;
 
 class PartOneTest extends BaseTest
 {
-    /**
-     */
     public function testApplyForJob()
     {
+        //initialize pages
+        $registrationPage = new RegistrationPage($this->driver);
+        $jobApplicationPage = new JobApplicationPage($this->driver);
+
+        //choose a job to apply
+        $this->chooseJob();
+
+        //register new account
+        $registrationPage->fillRegistrationForm();
+        $this->takeScreen();
+
+        // After successful registration, apply to the job and make sure it's applied successfully
+        $jobApplicationPage->fillForm();
+        $this->takeScreen();
+    }
+
+    private function chooseJob(): void
+    {
+        // initialize pages
         $homePage = new HomePage($this->driver);
         $aboutUsPage = new AboutUsPage($this->driver);
-        $jobApplicationPage = new JobApplicationPage($this->driver);
         $jobPage = new JobsPage($this->driver);
-        $registrationPage = new RegistrationPage($this->driver);
 
         //open
         $homePage->open();
+        $this->takeScreen();
 
         //accept cookies
         $homePage->acceptCookies();
-
+        $this->takeScreen();
 
         $homePage->scrollToFooter();
-        sleep(3);
-        $this->driver->takeScreenshot(__DIR__ . "\screenshots\partOne\/" . time() . ".png");
+        $this->takeScreen();
+
         $homePage->clickAboutUs();
-        sleep(2);
+        $this->takeScreen();
+
         //the way we can reach jobs without going to careers website
         $aboutUsPage->clickFirstJobCategory();
-        $this->driver->takeScreenshot(__DIR__ . "\screenshots\partOne\/" . time() . ".png");
-        sleep(2);
+        $this->takeScreen();
+
         $jobPage->clickFirstJob();
-        sleep(2);
-        $this->driver->takeScreenshot(__DIR__ . "\screenshots\partOne\/" . time() . ".png");
+        $this->takeScreen();
+
         $jobPage->clickApply(false);
-        sleep(2);
+        $this->takeScreen();
+    }
+
+    private function takeScreen(): void
+    {
         $this->driver->takeScreenshot(__DIR__ . "\screenshots\partOne\/" . time() . ".png");
-        $registrationPage->fillRegistrationForm();
-        sleep(2);
-        // After successful registration, fill out the forms and ensure the job is applied successfully
-        $jobApplicationPage->fillForm();
     }
 
 

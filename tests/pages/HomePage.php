@@ -13,10 +13,11 @@ class HomePage extends BasePage {
     public function scrollToFooter(): void
     {
         $this->driver->executeScript('window.scrollTo(0, document.body.scrollHeight);');
+        sleep(3);
     }
     public function searchJob($title,$location): void
     {
-        $this->driver->takeScreenshot(__DIR__ ."\screenshots\partTwo\/" . time() . ".png");
+
         $searchBox = $this->driver->findElement(WebDriverBy::id('text_search'));
 
         sleep(2);
@@ -42,5 +43,6 @@ class HomePage extends BasePage {
             WebDriverExpectedCondition::visibilityOfElementLocated(WebDriverBy::xpath('//a[text()="About Us"]'))
         );
         $aboutUsLink->click();
+        sleep(2);
     }
 }

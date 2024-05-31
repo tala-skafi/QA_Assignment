@@ -14,6 +14,7 @@ class AboutUsPage extends BasePage {
             WebDriverExpectedCondition::visibilityOfElementLocated(WebDriverBy::xpath('//*[@id="yw1"]/li[1]/a'))
         );
         $firstJobCategory->click();
+        sleep(2);
     }
 
 
