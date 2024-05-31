@@ -49,3 +49,59 @@
 <p align="left">• clone it from here.<br>• run the chrome webdriver.exe before running the code<br>• run any part you need and see the testing results assertions.<br>• each part has it's own folder of screenshots, which will be generated automatically once you run the code.</p>
 
 ###
+
+<h2 align="left">Part One:</h2>
+
+###
+
+<p align="left">It worked well, but facing some issues with the application form as not all the elements reachable.</p>
+
+###
+
+<h2 align="left">Part Two:</h2>
+
+###
+
+<p align="left">It worked well, but facing an issue with the popup window for confirming deletion.</p>
+
+###
+
+<h2 align="left">Part Three:</h2>
+
+###
+
+<p align="left">It worked well, but facing an issue with the popup window for confirming deletion.</p>
+
+###
+
+<h2 align="left">Part Four:</h2>
+
+###
+
+<p align="left">It worked well, but facing an issue with the popup window for confirming deletion.</p>
+
+###
+
+<h2 align="left">Part Five:</h2>
+
+###
+
+<p align="left">It worked well, but facing an issue with the popup window for confirming deletion.</p>
+
+###
+
+<h2 align="left">Bugs I found:</h2>
+
+###
+
+<p align="left">• in the postJob in part five, the values need to be validated:<br>ex: the age must be >experience. <br>ex: the age or experience fields should take only numbers but it takes letters + symbols.<br>ex: the fields that accepts number mustn't accept negatives.<br><br>• when I have a required or need edit field/s and insert my data, it's expected to remove the red borders  and warning when I press out of this field.<br><br>• refreshing or cancelling the page not generating popup message to make sure to leave or close. so all the data gone once you refresh the page</p>
+
+###
+
+<h2 align="left">Problems I faced:</h2>
+
+###
+
+<p align="left">• the popup window when delete account is not rechable <br>• run the chrome webdriver.exe before running the code<br>• run any part you need and see the testing results assertions.<br>• each part has it's own folder of screenshots, which will be generated automatically once you run the code.</p>
+
+###
