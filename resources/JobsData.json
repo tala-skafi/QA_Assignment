@@ -1,0 +1,29 @@
+[
+  {
+    "job_title": "Software Engineer",
+    "job_industries": "Software Development",
+    "job_career_level" : "Entry Level",
+    "exp_min": "1",
+    "exp_max": "3",
+    "from_home": "no",
+    "job_desc": "this is a description",
+    "job_skills": "some skills",
+    "age_min": "20",
+    "age_max": "40"
+
+  },
+  {
+    "job_title": "Ingénieur Logiciel",
+    "job_industries": "Développement de logiciels",
+    "job_career_level" : "Débutant",
+    "exp_min": "1",
+    "exp_max": "3",
+    "from_home": "non",
+    "job_desc": "Ceci est une description",
+    "job_skills": "quelques compétences",
+    "age_min": "20",
+    "age_max": "40"
+  }
+  
+
+]
