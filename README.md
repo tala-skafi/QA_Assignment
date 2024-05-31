@@ -62,7 +62,7 @@
 
 ###
 
-<p align="left">It worked well, but facing an issue with the popup window for confirming deletion.</p>
+<p align="left">1. Check that it loges in successfully.<br>2. Check that it deleted the account successfully.</p>
 
 ###
 
@@ -70,7 +70,7 @@
 
 ###
 
-<p align="left">It worked well, but facing an issue with the popup window for confirming deletion.</p>
+<p align="left">1. Check that it register a user and applies to job successfully with mobile size.</p>
 
 ###
 
@@ -86,7 +86,7 @@
 
 ###
 
-<p align="left">It worked well, but facing an issue with the popup window for confirming deletion.</p>
+<p align="left">1. Functionality testing<br>2. UI/UX testing<br>3. Validation testing<br>4. Languages testing</p>
 
 ###
 
@@ -94,7 +94,7 @@
 
 ###
 
-<p align="left">• in the postJob in part five, the values need to be validated:<br>ex: the age must be >experience. <br>ex: the age or experience fields should take only numbers but it takes letters + symbols.<br>ex: the fields that accepts number mustn't accept negatives.<br><br>• when I have a required or need edit field/s and insert my data, it's expected to remove the red borders  and warning when I press out of this field.<br><br>• refreshing or cancelling the page not generating popup message to make sure to leave or close. so all the data gone once you refresh the page</p>
+<p align="left">• in the postJob in part five, the values need to be validated:<br>ex: the age must be > experience. <br>ex: the age or experience fields should take only numbers but it takes letters + symbols.<br>ex: the fields that accepts number mustn't accept negatives.<br><br>• When I have field/s that require user to fill or need an edit,  and the user applies the edit, it's expected to remove the red borders and remove the warning when the user press out of this field.<br><br>• refreshing or cancelling the page not generating popup message to make sure to leave or close. so all the data gone once you refresh the page</p>
 
 ###
 
@@ -102,6 +102,6 @@
 
 ###
 
-<p align="left">• the popup window when delete account is not rechable <br>• run the chrome webdriver.exe before running the code<br>• run any part you need and see the testing results assertions.<br>• each part has it's own folder of screenshots, which will be generated automatically once you run the code.</p>
+<p align="left">• The popup window when deleting an account is not reachable.</p>
 
 ###
