@@ -147,11 +147,6 @@ class PartFiveTest extends BaseTest
 
         // get a job data to fill the form
         $JobData = TestUtils::getJsonData("JobsData")[0];
-//        $JobData["age_max"] = 10; // make it < min_age which is invalid
-//        //this test will fail
-//        $this->assertTrue($postJobPage->fillPostJobFormInvalidField($JobData), "there is no warning for invalid input");
-//        echo "Bug here";
-
         $JobData["exp_max"] = 0; // make it < min_experience which is invalid
         $this->assertTrue($postJobPage->fillPostJobFormInvalidField($JobData), "there is no warning for invalid input");
 
