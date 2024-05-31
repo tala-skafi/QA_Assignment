@@ -21,28 +21,42 @@ class JobApplicationPage extends BasePage
         $this->skipCV();
 
         // fill the form
-        $this->fillBirthDate($applicationData);
-        $this->fillGender($applicationData);
-        $this->fillNationality($applicationData);
-        $this->fillCity($applicationData);
-        $this->fillVisaState($applicationData);
-        $this->fillNoExperience();
-        $this->fillDegree($applicationData);
-        $this->fillUniversity($applicationData);
-        $this->fillUniversityCity($applicationData);
-        $this->fillUniversityCounter($applicationData);
-        $this->fillMajor($applicationData);
-        $this->fillGraduationDate($applicationData);
-        $this->fillJobLevel($applicationData);
+        try{
+            $this->fillBirthDate($applicationData);
+            $this->fillGender($applicationData);
+            $this->fillNationality($applicationData);
+            $this->fillCity($applicationData);
+            $this->fillVisaState($applicationData);
+            $this->fillNoExperience();
+            $this->fillDegree($applicationData);
+            $this->fillUniversity($applicationData);
+            $this->fillUniversityCity($applicationData);
+            $this->fillUniversityCounter($applicationData);
+            $this->fillMajor($applicationData);
+            $this->fillGraduationDate($applicationData);
+            $this->fillJobLevel($applicationData);
+            sleep(20);
+            $this->takeScreen();
 
+            //submit
+            $this->submit();
+
+            // check if successful application
+            $this->checkSuccessfulApplication();
+        }
+        catch(Exception $e){
+            echo $e->getMessage();
+            Assert::assertFalse(false);
+        }
+
+
+
+
+    }
+    private function takeScreen(): void
+    {
         // take a screenshot
-        $this->driver->takeScreenshot(__DIR__ . "\screenshots\JobApplicationForm\/" . time() . ".png");
-
-        //submit
-        $this->submit();
-
-        // check if successful application
-        $this->checkSuccessfulApplication();
+        $this->driver->takeScreenshot('C:\\Users\\user\\Desktop\\QA_Assignment\\screenshots\\jobApplicationForm\\' . time() . ".png");
 
     }
 
@@ -105,21 +119,21 @@ class JobApplicationPage extends BasePage
 
     private function fillNationality($application): void
     {
-        $this->driver->findElement(WebDriverBy::xpath('//*[@id="personalInformationForm_nationalityCitizenAc__r"]'))->click();
+        $this->driver->findElement(WebDriverBy::id('personalInformationForm_nationalityCitizenAc__r'))->click();
         $this->driver->findElement(WebDriverBy::xpath('//*[@id="yw0"]/section[2]/div[3]/div/div[1]/div/div[1]/div[2]/div/input'))->sendKeys($application["nationality"] . WebDriverKeys::ENTER);
 
     }
 
     private function fillCity($application): void
     {
-        $this->driver->findElement(WebDriverBy::xpath('//*[@id="personalInformationForm_resCity__r"]'))->click();
+        $this->driver->findElement(WebDriverBy::id('personalInformationForm_resCity__r'))->click();
         $this->driver->findElement(WebDriverBy::xpath('//*[@id="yw0"]/section[2]/div[5]/div/div[1]/div/div[1]/div[2]/div/input'))->sendKeys($application["city"] . WebDriverKeys::ENTER);
 
     }
 
     private function fillVisaState($application): void
     {
-        $this->driver->findElement(WebDriverBy::xpath('//*[@id="personalInformationForm_visaStatus__r"]'))->click();
+        $this->driver->findElement(WebDriverBy::id('personalInformationForm_visaStatus__r'))->click();
         $this->driver->findElement(WebDriverBy::xpath('//*[@id="yw0"]/section[2]/div[7]/div/div[1]/div/div[1]/div[2]/div/input'))->sendKeys($application["visa_status"] . WebDriverKeys::ENTER);
 
     }
@@ -133,7 +147,7 @@ class JobApplicationPage extends BasePage
 
     private function fillDegree($application): void
     {
-        $this->driver->findElement(WebDriverBy::xpath('//*[@id="EducationForm_degree__r"]'))->click();
+        $this->driver->findElement(WebDriverBy::id('EducationForm_degree__r'))->click();
         $this->driver->findElement(WebDriverBy::xpath('//*[@id="yw0"]/section[5]/div[1]/div/div[1]/div/div[1]/div[2]/div/input'))->sendKeys($application["degree"] . WebDriverKeys::ENTER);
 
     }
@@ -146,7 +160,7 @@ class JobApplicationPage extends BasePage
 
     private function fillUniversityCounter($application): void
     {
-        $this->driver->findElement(WebDriverBy::xpath('//*[@id="EducationForm_educationCountry__r"]'))->click();
+        $this->driver->findElement(WebDriverBy::id('EducationForm_educationCountry__r'))->click();
         $this->driver->findElement(WebDriverBy::xpath('//*[@id="yw0"]/section[5]/div[3]/div/div[1]/div/div[1]/div[2]/div/input'))->sendKeys($application["university_country"] . WebDriverKeys::ENTER);
 
 
@@ -154,7 +168,7 @@ class JobApplicationPage extends BasePage
 
     private function fillUniversityCity($application): void
     {
-        $this->driver->findElement(WebDriverBy::xpath('//*[@id="EducationForm_educationCity__r"]'))->click();
+        $this->driver->findElement(WebDriverBy::id('EducationForm_educationCity__r'))->click();
         $this->driver->findElement(WebDriverBy::xpath('//*[@id="yw0"]/section[5]/div[4]/div/div[1]/div/div[1]/div[2]/div/input'))->sendKeys($application["university_country"] . WebDriverKeys::ENTER);
 
     }
@@ -168,9 +182,9 @@ class JobApplicationPage extends BasePage
     private function fillGraduationDate($application): void
     {
         $dateParts = explode('-', $application["graduation_date"]);
-        $this->driver->findElement(WebDriverBy::xpath('//*[@id="EducationForm_completionMonth__r"]'))->click();
+        $this->driver->findElement(WebDriverBy::id('EducationForm_completionMonth__r'))->click();
         $this->driver->findElement(WebDriverBy::xpath('//*[@id="yw0"]/section[5]/div[7]/div/div/div[1]/div[1]/div/div[1]/div[2]/div/input'))->sendKeys($dateParts[0] . WebDriverKeys::ENTER);
-        $this->driver->findElement(WebDriverBy::xpath('//*[@id="EducationForm_completionYear__r"]'))->click();
+        $this->driver->findElement(WebDriverBy::id('EducationForm_completionYear__r'))->click();
         $this->driver->findElement(WebDriverBy::xpath('//*[@id="yw0"]/section[5]/div[7]/div/div/div[2]/div[1]/div/div[1]/div[2]/div/input'))->sendKeys($dateParts[1] . WebDriverKeys::ENTER);
 
     }

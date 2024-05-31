@@ -43,6 +43,7 @@ class PartFiveTest extends BaseTest
         $postJobPage = new PostJobPage($this->driver);
         //open
         $postJobPage->open();
+        $this->takeScreen();
 
         //accept cookies
         $postJobPage->acceptCookies();
@@ -103,7 +104,7 @@ class PartFiveTest extends BaseTest
 //    }
     private function takeScreen(): void
     {
-        $this->driver->takeScreenshot(__DIR__ . "\screenshots\partFive\/" . time() . ".png");
+        $this->driver->takeScreenshot('C:\\Users\\user\\Desktop\\QA_Assignment\\screenshots\\partFive\\' . time() . ".png");
     }
 
 

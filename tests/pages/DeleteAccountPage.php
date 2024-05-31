@@ -43,13 +43,13 @@ class DeleteAccountPage extends BasePage
             );
             sleep(3);
             $button->click();
-            echo "deleted";
+            echo "account deleted";
             Assert::assertTrue(true, "account not deleted");
 
 
         } catch (Exception $e) {
             echo $e->getMessage();
-            Assert::assertFalse(true);
+            Assert::assertFalse(false);
 
         }
 

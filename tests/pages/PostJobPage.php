@@ -46,7 +46,9 @@ class PostJobPage extends BasePage
 
             $this->driver->findElement(WebDriverBy::xpath('//*[@id="submitCIForm"]'))->click();
             sleep(5);
-            $this->driver->takeScreenshot(__DIR__ . "\screenshots\partFive\/" . time() . ".png");
+
+            //take screen
+            $this->takeScreen();
             return true;
         }
         catch (Exception $e){
@@ -57,6 +59,9 @@ class PostJobPage extends BasePage
     private function scrollToElement($element): void
     {
         $this->driver->executeScript('window.scrollBy(0, 600);');
+    }
+    private function takeScreen(): void{
+        $this->driver->takeScreenshot('C:\\Users\\user\\Desktop\\QA_Assignment\\screenshots\\partFive\\' . time() . ".png");
     }
 
 }

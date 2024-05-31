@@ -27,6 +27,7 @@ class PartOneTest extends BaseTest
         $this->takeScreen();
 
         // After successful registration, apply to the job and make sure it's applied successfully
+//        $this->driver->get("file:///C:/Users/user/Downloads/Complete%20Your%20CV%20-%20Bayt.com.html");
         $jobApplicationPage->fillForm();
         $this->takeScreen();
     }
@@ -65,7 +66,7 @@ class PartOneTest extends BaseTest
 
     private function takeScreen(): void
     {
-        $this->driver->takeScreenshot(__DIR__ . "\screenshots\partOne\/" . time() . ".png");
+        $this->driver->takeScreenshot('C:\\Users\\user\\Desktop\\QA_Assignment\\screenshots\\partOne\\' . time() . ".png");
     }
 
 

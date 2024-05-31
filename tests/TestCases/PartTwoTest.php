@@ -41,7 +41,7 @@ class PartTwoTest extends BaseTest
 
     private function takeScreen(): void
     {
-        $this->driver->takeScreenshot(__DIR__ . "\screenshots\partTwo\/" . time() . ".png");
+        $this->driver->takeScreenshot('C:\\Users\\user\\Desktop\\QA_Assignment\\screenshots\\partTwo\\' . time() . ".png");
     }
 
 
