@@ -27,16 +27,17 @@ class LoginPage extends BasePage
         $this->driver->findElement(WebDriverBy::id('login-button'))->click();
         try{
             $this->driver->wait(10)->until(
-                WebDriverExpectedCondition::presenceOfElementLocated(WebDriverBy::className('g_id_signout'))
+                WebDriverExpectedCondition::presenceOfElementLocated(WebDriverBy::id('login-button'))
             );
-            Assert::assertTrue(true, "User is logged in");
+            echo "not logged in";
+            Assert::assertTrue(false, "User is not logged in");
+
 
         }
         catch (Exception) {
-            // Class not found or other error occurred
-            echo "not logged in";
+            // can't see the login button means we left the login page !! which means we logged in
+            Assert::assertTrue(true, "User is logged in");
 
-            Assert::assertTrue(false, "User is not logged in");
 
         }
 

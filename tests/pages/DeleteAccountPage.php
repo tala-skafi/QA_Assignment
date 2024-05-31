@@ -39,7 +39,7 @@ class DeleteAccountPage extends BasePage
             $this->driver->switchTo()->window($popupWindowHandle);
 
             $button = $this->driver->wait(10)->until(
-                WebDriverExpectedCondition::elementToBeClickable(WebDriverBy::xpath("/html/body/div[9]/div/div/div[3]/div/button[2]"))
+                WebDriverExpectedCondition::elementToBeClickable(WebDriverBy::xpath("//button[@class='btn u-expanded-m is-danger non-aid' and @data-js-aid='delete']"))
             );
             sleep(3);
             $button->click();

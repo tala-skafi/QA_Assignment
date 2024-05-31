@@ -30,7 +30,7 @@ class AccountSettingPage extends BasePage
         $deleteLink = $this->driver->wait(10)->until(
             WebDriverExpectedCondition::elementToBeClickable(WebDriverBy::xpath("//a[@href='/en/jobseeker/my-account/delete-account/']"))
         );
-        sleep(10);
+        sleep(3);
         $deleteLink->click();
 
     }

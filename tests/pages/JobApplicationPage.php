@@ -35,7 +35,7 @@ class JobApplicationPage extends BasePage
             $this->fillMajor($applicationData);
             $this->fillGraduationDate($applicationData);
             $this->fillJobLevel($applicationData);
-            sleep(20);
+            sleep(5);
             $this->takeScreen();
 
             //submit
