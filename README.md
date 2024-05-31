@@ -54,7 +54,7 @@
 
 ###
 
-<p align="left">It worked well, but facing some issues with the application form as not all the elements reachable.</p>
+<p align="left">1. Check the validation message for already registered users.<br>2. Check that it registers user successfully.<br>3. Check that it applies to job successfully.</p>
 
 ###
 
@@ -78,7 +78,7 @@
 
 ###
 
-<p align="left">It worked well, but facing an issue with the popup window for confirming deletion.</p>
+<p align="left">List other test scenarios that could be written as test cases, not automated<br>test cases :<br><br>• Forgot Password Functionality:<br>Verify the "Forgot Password" link on the login page.<br>Ensure that submitting a request for Forgot Password sends a password reset link.<br>Verify that following the password reset link allows the user to set a new password.<br><br>• Job Search Functionality:<br>Verify that job search with proper filters like location, job type, salary range, from home, returns accurate results.<br>Check the sorting feature for ex: by date, relevance, works correctly.<br><br>• Profile Completion Reminder:<br>Verify that the user receives reminders to complete their profile.<br>Check that filling in additional profile information updates the profile completion status.<br>Verify that users can update their profile information (e.g., contact details, experience).<br>Check that changes are reflected immediately in the user's profile.<br><br>• Save Job for Later:<br>Ensure that logged-in users can save jobs for later viewing.<br>Verify that saved jobs appear correctly in the user's saved jobs list.</p>
 
 ###
 
