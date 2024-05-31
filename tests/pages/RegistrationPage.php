@@ -19,8 +19,7 @@ class RegistrationPage extends BasePage
         $userData = TestUtils::getJsonData("UsersData")[0];
 
         // Fill out the form of registration
-//        $email = $this->generateDynamicEmail();
-        $email="talaskafi1998@gmail.com";
+        $email = $this->generateDynamicEmail();
         $this->driver->findElement(WebDriverBy::id('JsApplicantRegisterForm_firstName'))->sendKeys($userData["name"]);
         $this->driver->findElement(WebDriverBy::id('JsApplicantRegisterForm_lastName'))->sendKeys($userData["last_name"]);
         $this->driver->findElement(WebDriverBy::id('JsApplicantRegisterForm_email'))->sendKeys($email);
