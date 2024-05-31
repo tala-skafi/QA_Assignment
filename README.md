@@ -98,6 +98,14 @@
 
 ###
 
+<h2 align="left">Suggestions:</h2>
+
+###
+
+<p align="left">• For the post job page, convert the whole page to the selected language.<br>• For the post job page, adding autoscroll to error fields.</p>
+
+###
+
 <h2 align="left">Problems I faced:</h2>
 
 ###
