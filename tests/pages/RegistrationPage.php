@@ -54,11 +54,16 @@ class RegistrationPage extends BasePage
     private function validateEmail(): void
     {
         try {
-            $element = $this->driver->findElement(WebDriverBy::id('JsMiniRegistrationForm_email_em_'));
+            $this->scrollUp();
+            sleep(2);
+            $element = $this->driver->wait()->until(
+                WebDriverExpectedCondition::visibilityOfElementLocated(WebDriverBy::id('JsMiniRegistrationForm_email_em_'))
+            );
             // Check if the element contains text
             $elementText = $element->getText();
             $this->takeScreen();
-            if (!empty(trim($elementText))) {
+            echo "element text=  " .$elementText;
+            if (str_contains($elementText, 'already registered')) {
                 echo "the email is already exist" . $elementText;
                 Assert::assertTrue(true, $elementText);
 //                $email = $this->generateDynamicEmail();
@@ -91,6 +96,11 @@ class RegistrationPage extends BasePage
     private function takeScreen(): void
     {
         $this->driver->takeScreenshot('C:\\Users\\user\\Desktop\\QA_Assignment\\screenshots\\partOne\\' . time() . ".png");
+    }
+    private function scrollUp(): void
+    {
+        $this->driver->executeScript('window.scrollBy(0, -600);');
+
     }
 
 
