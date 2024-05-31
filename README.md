@@ -53,6 +53,8 @@
 <h2 align="left">Part One:</h2>
 
 ###
+![image](https://github.com/tala-skafi/QA_Assignment/assets/65433042/9370a01e-9685-4f75-b456-8500293de90d)
+
 
 <p align="left">1. Check the validation message for already registered users.<br>2. Check that it registers user successfully.<br>3. Check that it applies to job successfully.</p>
 
