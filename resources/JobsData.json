@@ -23,7 +23,18 @@
     "job_skills": "quelques compétences",
     "age_min": "20",
     "age_max": "40"
+  },
+  {
+    "job_title": "مهندس برمجيات",
+    "job_industries": "تطوير البرمجيات",
+    "job_career_level" : "مستوى مبتدئ",
+    "exp_min": "1",
+    "exp_max": "3",
+    "from_home": "لا",
+    "job_desc": "هذه وصف للوظيفة",
+    "job_skills": "بعض المهارات",
+    "age_min": "20",
+    "age_max": "40"
   }
-  
 
 ]

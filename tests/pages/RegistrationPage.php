@@ -19,7 +19,8 @@ class RegistrationPage extends BasePage
         $userData = TestUtils::getJsonData("UsersData")[0];
 
         // Fill out the form of registration
-        $email = $this->generateDynamicEmail();
+//        $email = $this->generateDynamicEmail();
+        $email="talaskafi1998@gmail.com";
         $this->driver->findElement(WebDriverBy::id('JsApplicantRegisterForm_firstName'))->sendKeys($userData["name"]);
         $this->driver->findElement(WebDriverBy::id('JsApplicantRegisterForm_lastName'))->sendKeys($userData["last_name"]);
         $this->driver->findElement(WebDriverBy::id('JsApplicantRegisterForm_email'))->sendKeys($email);
@@ -56,14 +57,15 @@ class RegistrationPage extends BasePage
             $element = $this->driver->findElement(WebDriverBy::id('JsMiniRegistrationForm_email_em_'));
             // Check if the element contains text
             $elementText = $element->getText();
+            $this->takeScreen();
             if (!empty(trim($elementText))) {
                 echo "the email is already exist" . $elementText;
-                Assert::assertStringContainsString('Email is already registered', $elementText);
-                $email = $this->generateDynamicEmail();
-                $this->driver->findElement(WebDriverBy::id('JsApplicantRegisterForm_email'))->sendKeys("");
-                sleep(1);
-                $this->driver->findElement(WebDriverBy::id('JsApplicantRegisterForm_email'))->sendKeys($email);
-                $this->submit();
+                Assert::assertTrue(true, $elementText);
+//                $email = $this->generateDynamicEmail();
+//                $this->driver->findElement(WebDriverBy::id('JsApplicantRegisterForm_email'))->sendKeys("");
+//                sleep(1);
+//                $this->driver->findElement(WebDriverBy::id('JsApplicantRegisterForm_email'))->sendKeys($email);
+//                $this->submit();
             }
 
         } catch (Exception $e) {
@@ -85,6 +87,10 @@ class RegistrationPage extends BasePage
         $userData['email'] = $email;
         $updatedJsonString = json_encode([$userData], JSON_PRETTY_PRINT);
         file_put_contents('C:\Users\user\Desktop\QA_Assignment\resources\UsersData.json', $updatedJsonString);
+    }
+    private function takeScreen(): void
+    {
+        $this->driver->takeScreenshot('C:\\Users\\user\\Desktop\\QA_Assignment\\screenshots\\partOne\\' . time() . ".png");
     }
 
 

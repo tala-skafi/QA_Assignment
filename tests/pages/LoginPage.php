@@ -32,7 +32,7 @@ class LoginPage extends BasePage
             Assert::assertTrue(true, "User is logged in");
 
         }
-        catch (Exception $e) {
+        catch (Exception) {
             // Class not found or other error occurred
             echo "not logged in";
 

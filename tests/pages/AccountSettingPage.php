@@ -2,28 +2,28 @@
 
 namespace Pages;
 
-use Exception;
+
 use Facebook\WebDriver\WebDriverBy;
 use Facebook\WebDriver\WebDriverExpectedCondition;
-use Facebook\WebDriver\WebDriverKeys;
-use PHPUnit\Framework\Assert;
+
 
 class AccountSettingPage extends BasePage
 {
     public function openSettings()
     {
-    $button = $this->driver->wait(10)->until(
-        WebDriverExpectedCondition::elementToBeClickable(WebDriverBy::className('is-ellipsis-v'))
-    );
+        $button = $this->driver->wait(10)->until(
+            WebDriverExpectedCondition::elementToBeClickable(WebDriverBy::className('is-ellipsis-v'))
+        );
 
-            $button->click();
+        $button->click();
         sleep(5);
-        $accountSettings=$this->driver->findElement(WebDriverBy::xpath("//a[contains(@class, 'g_id_signout') and contains(text(), 'Account Settings')]"));
+        $accountSettings = $this->driver->findElement(WebDriverBy::xpath("//a[contains(@class, 'g_id_signout') and contains(text(), 'Account Settings')]"));
         sleep(2);
         $accountSettings->click();
         sleep(2);
 
     }
+
     public function goToDelete()
     {
         $this->driver->executeScript('window.scrollBy(0, 1300);');

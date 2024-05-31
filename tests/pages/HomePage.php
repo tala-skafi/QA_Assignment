@@ -1,12 +1,15 @@
 <?php
+
 namespace Pages;
 
 use Facebook\WebDriver\WebDriverBy;
 use Facebook\WebDriver\WebDriverExpectedCondition;
 use Facebook\WebDriver\WebDriverKeys;
 
-class HomePage extends BasePage {
-    public function open() {
+class HomePage extends BasePage
+{
+    public function open()
+    {
         $this->driver->get('https://www.bayt.com');
     }
 
@@ -15,7 +18,8 @@ class HomePage extends BasePage {
         $this->driver->executeScript('window.scrollTo(0, document.body.scrollHeight);');
         sleep(3);
     }
-    public function searchJob($title,$location): void
+
+    public function searchJob($title, $location): void
     {
 
         $searchBox = $this->driver->findElement(WebDriverBy::id('text_search'));
@@ -38,7 +42,8 @@ class HomePage extends BasePage {
 
     }
 
-    public function clickAboutUs() {
+    public function clickAboutUs(): void
+    {
         $aboutUsLink = $this->driver->wait()->until(
             WebDriverExpectedCondition::visibilityOfElementLocated(WebDriverBy::xpath('//a[text()="About Us"]'))
         );

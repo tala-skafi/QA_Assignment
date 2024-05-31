@@ -2,7 +2,6 @@
 
 use Facebook\WebDriver\Exception\NoSuchElementException;
 use Facebook\WebDriver\Exception\TimeoutException;
-use Facebook\WebDriver\WebDriverDimension;
 use Pages\HomePage;
 use Pages\JobApplicationPage;
 use Pages\JobsPage;
@@ -11,10 +10,6 @@ use TestCases\BaseTest;
 
 class PartThreeTest extends BaseTest
 {
-    /**
-     * @throws NoSuchElementException
-     * @throws TimeoutException
-     */
     public function testApplyForJob()
     {
         // initialize pages

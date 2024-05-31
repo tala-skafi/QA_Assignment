@@ -2,8 +2,6 @@
 
 namespace TestCases;
 
-use Facebook\WebDriver\Exception\NoSuchElementException;
-use Facebook\WebDriver\Exception\TimeoutException;
 use Pages\HomePage;
 use Pages\AboutUsPage;
 use Pages\JobApplicationPage;
