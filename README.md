@@ -94,7 +94,8 @@
 
 ###
 
-<p align="left">• in the postJob in part five, the values need to be validated:<br>ex: the age must be > experience. <br>ex: the age or experience fields should take only numbers but it takes letters + symbols.<br>ex: the fields that accepts number mustn't accept negatives.<br><br>• When I have field/s that require user to fill or need an edit,  and the user applies the edit, it's expected to remove the red borders and remove the warning when the user press out of this field.<br><br>• refreshing or cancelling the page not generating popup message to make sure to leave or close. so all the data gone once you refresh the page</p>
+<p align="left">• in the postJob in part five, the values need to be validated:<br>ex: the age must be > experience. <br>ex: the age or experience fields should take only numbers but it takes letters + symbols.<br>ex: the fields that accepts number mustn't accept negatives.<br><br>• When I have field/s that require user to fill or need an edit,  and the user applies the edit, it's expected to remove the red borders and remove the warning when the user press out of this field.<br><br>• refreshing or cancelling the page not generating popup message to make sure to leave or close. so all the data gone once you refresh the page <br><br>• bug in putting min age greater that max age with no error message </p>
+![Capture](https://github.com/tala-skafi/QA_Assignment/assets/65433042/28d7f05b-3e24-4878-b944-0454905f4d72)
 
 ###
 
@@ -113,3 +114,5 @@
 <p align="left">• The popup window when deleting an account is not reachable.</p>
 
 ###
+![image](https://github.com/tala-skafi/QA_Assignment/assets/65433042/6007668c-fc7e-48b2-9120-364d2450ea81)
+
