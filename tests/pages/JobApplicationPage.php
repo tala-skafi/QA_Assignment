@@ -22,6 +22,7 @@ class JobApplicationPage extends BasePage
 
         // fill the form
         try{
+            $this->takeScreen();
             $this->fillBirthDate($applicationData);
             $this->fillGender($applicationData);
             $this->fillNationality($applicationData);
