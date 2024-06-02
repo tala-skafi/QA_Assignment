@@ -103,12 +103,18 @@
 ###
 ![Capture](https://github.com/tala-skafi/QA_Assignment/assets/65433042/45f16d78-7e14-457d-8b94-38c8402484d7)
 
+<p align="left"><br><br>• The continue with Google for log in is not working on mobile (both display as desktop and normal browsing) knowing that it works well with continue with Facebook and Apple . <br><br></p>
+
+![WhatsApp Image 2024-06-02 at 8 03 12 PM](https://github.com/tala-skafi/QA_Assignment/assets/65433042/3c0537a8-2211-4e97-bcbc-ec075abac670)
+
+![WhatsApp Image 2024-06-02 at 8 03 12 PM (1)](https://github.com/tala-skafi/QA_Assignment/assets/65433042/67366988-6a51-4a27-9894-e415ccfd072b)
+
 
 <h2 align="left">Suggestions:</h2>
 
 ###
 
-<p align="left">• For the post job page, convert the whole page to the selected language.<br>• For the post job page, adding autoscroll to error fields.</p>
+<p align="left">• For the post job page, convert the whole page to the selected language.<br>• For the post job page, add auto-scroll to error fields.</p>
 
 ###
 
